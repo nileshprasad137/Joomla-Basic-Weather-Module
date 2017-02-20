@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>MOD_WEATHER24X7</name>
+    <author>NILESH PRASAD</author>
+    <version>1.0.0</version>
+    <description>MOD_WEATHER24X7_DESCRIPTION</description>
+    <files>
+        <filename>mod_weather24x7.xml</filename>
+        <filename module="mod_weather24x7">mod_weather24x7.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>        
+        <folder>css</folder>        
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_weather24x7.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_weather24x7.sys.ini</language>
+    </languages>
+    <media folder="media" destination="mod_weather24x7">        
+        <folder>css</folder>        
+    </media>
+    <config>
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="key" type="text" default="" label="MOD_WEATHER24X7_PARAM_KEY_LABEL" description="MOD_WEATHER24X7_PARAM_KEY_DESCRIPTION" required="true"/>
+            <field name="city" type="text" default="" label="MOD_WEATHER24X7_PARAM_CITY_LABEL" description="MOD_WEATHER24X7_PARAM_CITY_DESCRIPTION" required="true"/>
+            <field name="temp_type" type="list" default="1" label="MOD_WEATHER24X7_PARAM_TEMP_TYPE_LABEL" description="MOD_WEATHER24X7_PARAM_TEMP_TYPE_DESCRIPTION">
+              <option value="0">MOD_WEATHER24X7_PARAM_TEMP_TYPE_CELSIUS</option>
+              <option value="1">MOD_WEATHER24X7_PARAM_TEMP_TYPE_FAHRENHEIT</option>
+            </field>
+        </fieldset>
+    </fields>    
+    </config>
+</extension>
