@@ -34,7 +34,7 @@ class ModWeather24x7Helper
                 }
                 else if($temp_type==1)
                 {
-                    $weather->temp = $current_temp_fahrenheit;
+                    $weather['temp'] = $current_temp_fahrenheit;
                 }
                 
            }           
